@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <!-- ⑥↓タイトルを変えてみよう -->
+    <title>apiを使った</title>
+    <!-- ⑤スタイルシートの設定をしよう -->
+     <link rel="stylesheet" href="./css/index.css">
+    <!-- h1.htmlからある行をコピペしてくればOK -->
+</head>
+<body>
+    <h1>wikipediaのapiを使った検索</h1>
+    <div><h2>アーティストのライブ・イベントを検索</h2>
+    完全に私事ですが、最近気になったアーティストがどんなライブの予定があるのか知りたくなったときがありました。<br>
+    しかし、いざ調べてみるとライブ以外の情報が出てくるので、見つけずらかったです。<br>
+    なので、ライブやイベントの情報に焦点を当てた検索ができればいいなと思いました。<br><br>
+    今回の機能で、好きなアーティスト・気になったアーティストがどんなイベントやライブをやっているのか一目で調べられます。
+    <h2>コード（未完成の上、機能してくれません）</h2>
+    </div>
+    <pre><code>import wikipedia #importは最初にまとめておくとはっきりする
+
+        def get_artist_events(keyward):
+            wiki = wikipedia.Wikipedia('ja')  
+            keyward = "ここにアーティスト名"
+            result = wikipedia.search(keyward)
+            page = wiki.page(keyward)
+            print("検索結果",result) #絶対コードの並び違う
+            
+            if not page.exists(keyward):
+                return print(f"アーティスト「{keyward}」の情報は見つかりませんでした。")
+            
+            content = page.text[:1000]  
+        
+            if '公演' in content or 'イベント' in content or 'コンサート' in content:
+                return print(f"アーティスト「{keyward}」が開催したイベント情報を調査しました。\n{content}")
+            else:
+                return print(f"アーティスト「{keyward}」に関連するイベント情報は見つかりませんでした。")</code></pre>
+<div><h2>まとめ＋問題発生</h2>
+今回も、pythonを使ったコード作成は非常に難しいと痛感しました。<br>
+チャットgptに骨組みを作ってもらいましたがうまく機能しなく、私自身もpythonを理解できてないので今回のコードは完成させられませんでした。<br>
+</div>
