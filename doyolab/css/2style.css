@@ -55,13 +55,17 @@ a:active, a:focus,input:active, input:focus{outline:0;}
   height: 528px;
 }
 
-#mainImg img{
-	position: absolute;
+#mainImg img {
+  position: absolute;
+  top: 0;
   left: 50%;
-	max-width: 1280px;
-  width: 1280px;
-  height: 528px;
-  margin-left: -640px;
+  transform: translateX(-50%); /* 自分の幅の半分だけ自動で戻る */
+  max-width: 1280px;
+  height: auto; /* 比率を維持 */
+}
+#mainImg img {
+  height: 528px; 
+  object-fit: contain; /* 画像全体が収まるように自動調整 */
 }
 
 
