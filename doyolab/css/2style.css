@@ -14,7 +14,7 @@ h1,h2,h3,h4,h5,h6{font-size:100%;}
 img,abbr,acronym,fieldset{border:0;}
 
 body{
-	font: 20px/1.9 'Noto Sans JP', Arial, Verdana, 游ゴシック, YuGothic,'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', メイリオ, Meiryo,sans-serif;
+	font: 20px/1.9 ,'Noto Sans JP', Arial, Verdana, 游ゴシック, YuGothic,'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', メイリオ, Meiryo,sans-serif;
 	font-weight: 300;
 	-webkit-text-size-adjust:100%;
 	overflow-x: hidden;
@@ -41,7 +41,12 @@ a:active, a:focus,input:active, input:focus{outline:0;}
 }
 
 #header h1{
-	padding-top: 60px;
+	padding-top: 80px;
+	padding-bottom: 8px;
+}
+
+#header h2{
+	padding-bottom: 12px;
 }
 
 #mainnav a{
@@ -88,10 +93,10 @@ section{
 }
 
 section h2{
-	font-family: 'Pacifico', cursive;
+	font-family: 'Helvetica' , cursive; /*ぶっちーのwebの英字フォント変えれる*/
 	width: 60%;
 	margin: 0 auto 40px;
-	font-size: 22px;
+	font-size: 21px;
 	font-weight:normal;
 	text-align: center;
 	background: url(../images/borderBlack.png) repeat-x 0 50%;
