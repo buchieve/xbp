@@ -57,7 +57,7 @@ a:active, a:focus,input:active, input:focus{outline:0;}
 	position: relative;
   overflow: hidden;
   width: 100%;
-  height: 528px;
+  height: 600px;
 }
 
 #mainImg img {
@@ -66,7 +66,7 @@ a:active, a:focus,input:active, input:focus{outline:0;}
   left: 50%;
   transform: translateX(-50%); /* 自分の幅の半分だけ自動で戻る */
   max-width: 1920px;
-  height: auto; /* 比率を維持 */
+  max-height: auto; /* 比率を維持 */
 }
 
 /* フッター
@@ -92,8 +92,9 @@ section{
 	padding-top: 70px;
 }
 
+/*↓ページ下部の説明文のフォント*/
 section h2{
-	font-family: 'Helvetica' , cursive; /*ぶっちーのwebの英字フォント変えれる*/
+	font-family: 'Helvetica' , cursive; /*赤字のとこ、英字フォント変えれる*/
 	width: 60%;
 	margin: 0 auto 40px;
 	font-size: 21px;
@@ -102,7 +103,11 @@ section h2{
 	background: url(../images/borderBlack.png) repeat-x 0 50%;
 	background-size: 1px 1px;
 }
+/*↑ページ下部の説明文のフォント*/
 
+.underline{
+	text-decoration: underline;
+}
 section h2 span {
 	background: #fff;
 	padding: 0 80px;
