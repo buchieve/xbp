@@ -109,7 +109,8 @@ section h2{
 	text-decoration: underline;
 }
 section h2 span {
-	background: #fff;
+	background: transparent !important; /*背景を透明に*/
+	color: #fff !important;/*文字を白に*/
 	padding: 0 80px;
 }
 
@@ -128,23 +129,19 @@ section h2 span {
 
 /* SEC02 Gallery
 ------------------------------------------------------------*/
-#sec02{
-	padding: 0 !important;
+/* 親要素の設定 */
+#gallery {
+    display: flex;       /* 横並びにする命令 */
+    flex-wrap: wrap;    /* 幅がいっぱいになったら自動で折り返す */
+    padding: 0;
+    margin: 0;
 }
 
-#sec02 header{
-	display: none;
-}
-
+/* 子要素（リスト）の設定 */
 #gallery li{
-	float: left;
-	width: calc(100%/3);
-	line-height: 0;
-}
-
-#gallery img{
-	width: 100%;
-	height: auto;
+    /* float: left; は削除 */
+    width: calc(100%/3); /* 幅の指定はそのまま */
+    line-height: 0;
 }
 
 
