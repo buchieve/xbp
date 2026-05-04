@@ -203,3 +203,48 @@ section h2 span {
 		padding: 5px 10px 20px 0;
 	}
 }
+
+/* 800px未満（スマホ・タブレット）用の修正 */
+@media only screen and (max-width: 799px) {
+    /* 1. ヘッダーの重なりを解消 */
+    #header h1 {
+        padding-top: 20px; /* 余白を調整 */
+    }
+    
+    #header h1 img {
+        max-width: 80%; /* ロゴがはみ出さないように */
+        height: auto;
+    }
+
+    /* 2. メイン画像の重なり・高さを解消 */
+    #mainImg {
+        height: auto !important; /* 高さを固定せず中身に合わせる */
+        position: relative !important;
+        overflow: visible;
+    }
+
+    #mainImg img {
+        position: relative !important; /* 浮かせるのをやめて順番に並べる */
+        left: 0 !important;
+        transform: none !important;
+        width: 100% !important;
+        height: auto !important;
+        margin-left: 0 !important;
+    }
+
+    /* 3. ギャラリー（画像並び）を縦にする */
+    #gallery li {
+        float: none !important;
+        width: 100% !important;
+    }
+
+    /* 4. セクションの余白調整 */
+    section h2 {
+        width: 90% !important; /* 画面幅いっぱいに使う */
+        font-size: 18px !important;
+    }
+    
+    section h2 span {
+        padding: 0 20px !important; /* 背景の白い余白を狭くする */
+    }
+}
