@@ -77,6 +77,18 @@ a:active, a:focus,input:active, input:focus{outline:0;}
 	text-align: center;
 	font-size: 18px;
 }
+/* メニューの上下の隙間を詰める */
+    #mainnav li {
+        display: inline-block !important; /* 横並びを維持 */
+        padding: 10px 15px !important;    /* 50pxから10pxに大幅に減らす */
+        line-height: 1.4 !important;      /* 行間をギュッと詰める */
+        font-size: 14px !important;       /* スマホに合わせて文字を少し小さく */
+    }
+
+    /* メニュー全体の余白も微調整（必要に応じて） */
+    #mainnav {
+        padding: 10px 0 !important;
+    }
 
 
 /* 共通
@@ -252,5 +264,6 @@ section h2 span {
         padding: 0 !important;
         background: transparent !important;
     }
+	
 }
 /* --- スマホ・タブレット用の上書き設定（ここまで） --- */
